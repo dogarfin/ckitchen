@@ -1,0 +1,20 @@
+<html>
+  <body>
+
+    <form action="/Report" method="post"> Generate reports for: <p>
+      <input type="radio" name="mode" value="individual">  The most hours for indiviuals in the selected time frame <p> 
+      <input type="radio" name="mode" value="group"> The most hours for groups in the selected time frame <p>
+      <input name="start" type="text" rows="1"> Starting Date (mm-dd-yyyy) <p>
+      <input name="end" type="text" rows="1"> Ending Date (mm-dd-yyyy) <p> 
+      <input type="submit" value="Generate Report"> 
+    </form>
+
+    <form action="/VolsToday" method="post"> See who is volunteering this day:
+       <input name="day" type="text" rows="1"> Date (mm-dd-yyyy) <p> 
+       <input type="submit" value="This day">
+    </form>
+    
+    </body>
+</html>
+    
+

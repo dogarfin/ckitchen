@@ -1,0 +1,133 @@
+]<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!--DVID=00014E6B-->
+<HTML>
+<head>
+
+<title>February 2007</title>
+<style type="text/css">
+html, body { margin: 0; padding: 0 }
+body { background-color:#060; }
+#container { margin: 3em auto  0 3em; padding-bottom: 3em; background-color: #fff; }
+#month { border-collapse: collapse; margin-left: 2em; }
+#month th, #month td { border: 1px solid #000; }
+#month thead { background-color:#9c9; }
+#month td { width: 7em; height: 7em; padding: .2em; vertical-align: top; overflow: auto; }
+td .day { width: 7em; height: 6em; overflow:auto; margin-top: 0; }
+#month tbody .weekend { background-color:#ded; }
+#month tbody .next, #month tbody .previous { background-color:#ddd; }
+.rtop { display:block; background:#060; }
+.rtop * { display: block; height: 1px; overflow: hidden; background:#fff; }
+.r1{margin: 0 0 0 5px}
+.r2{margin: 0 0 0 3px}
+.r3{margin: 0 0 0 2px}
+.r4{margin: 0 0 0 1px; height: 2px}
+#container h1 { margin: 0 0 .5em .5em; font: 2em Arial, Helvetica, sans-serif; color: #060; }
+#month th { font: 1em  bold Arial, Helvetica, sans-serif; }
+p {margin-top: 0; }
+</style>
+</head>
+
+<body>
+<div id="container">
+<b class="rtop"><b class="r1"></b> <b class="r2"></b><b class="r3"></b> <b class="r4"></b></b>
+<h1>October 2012</h1>
+<table id="month">
+	<thead>
+		<tr>
+			<th class="weekend">Sunday</th>
+			<th>Monday</th>
+			<th>Tuesday</th>
+			<th>Wednesday</th>
+			<th>Thursday</th>
+			<th>Friday</th>
+			<th class="weekend">Saturday</th>
+		</tr>
+	</thead>
+	<tbody>	    
+	  
+		<tr>
+		{% if dates.0 gt 7 %}
+		        <td class="weekend previous"><span class="date">{{dates.0}}</span><div class="day"></div></td>
+		{% else %}
+			<td class="weekend"><span class="date">{{dates.0}}</span><div class="day"></div></td>
+		{% endif %}
+
+		{% if dates.1 gt 7 %}
+			<td class="previous"><span class="date">{{dates.1}}</span><div class="day"></div></td>
+		{% else %}
+			<td><span class="date">{{dates.1}}</span><div class="day"></div></td>
+		{% endif %}
+
+		{% if dates.2 gt 7 %}
+		       	<td class="previous"><span class="date">{{dates.2}}</span><div class="day"></div></td>
+		{% else %}
+			<td><span class="date">{{dates.2}}</span><div class="day"></div></td>
+		{% endif %}
+
+		{% if dates.3 gt 7 %}
+			<td class="previous"><span class="date">{{dates.3}}</span><div class="day"></div></td>
+		{% else %}
+			<td><span class="date">{{dates.3}}</span><div class="day"></div></td>
+		{% endif %}
+
+		{% if dates.4 gt 7 %}
+			<td class="previous"><span class="date">{{dates.4}}</span><div class="day"></div></td>
+		{% else %}
+			<td><span class="date">{{dates.4}}</span><div class="day"></div></td>
+		{% endif %}
+
+		{% if dates.5 gt 7 %}
+			<td class="previous"><span class="date">{{dates.5}}</span><div class="day"></div></td>
+		{% else %}
+			<td><span class="date">{{dates.5}}</span><div class="day"></div></td>
+		{% endif %}
+
+		{% if dates.6 gt 7 %}
+			<td class="weekend previous"><span class="date">{{dates.6}}</span><div class="day"></div></td>
+		{% else %}
+			<td class="weekend"><span class="date">{{dates.6}}</span><div class="day"></div></td>
+		{% endif %}
+
+		
+		</tr>
+		<tr>
+			<td class="weekend"><span class="date">{{dates.7}}</span><div class="day"></div></td>
+			<td><span class="date">5</span><div class="day"></div></td>
+			<td><span class="date">6</span><div class="day"></div></td>
+			<td><span class="date">7</span><div class="day"></div></td>
+			<td><span class="date">8</span><div class="day"></div></td>
+			<td><span class="date">9</span><div class="day"></div></td>
+			<td class="weekend"><span class="date">10</span><div class="day"></div></td>
+		</tr>
+		<tr>
+			<td class="weekend"><span class="date">11</span><div class="day"></div></td>
+			<td><span class="date">12</span><div class="day"></div></td>
+			<td><span class="date">13</span><div class="day"></div></td>
+			<td><span class="date">14</span><div class="day"></div></td>
+			<td><span class="date">15</span><div class="day"></div></td>
+
+			<td><span class="date">16</span><div class="day"></div></td>
+			<td class="weekend"><span class="date">17</span><div class="day"></div></td>
+		</tr>
+		<tr>
+			<td class="weekend"><span class="date">18</span><div class="day"></div></td>
+			<td><span class="date">19</span><div class="day"></div></td>
+			<td><span class="date">20</span><div class="day"></div></td>
+			<td><span class="date">21</span><div class="day"></div></td>
+			<td><span class="date">22</span><div class="day"></div></td>
+			<td><span class="date">23</span><div class="day"></div></td>
+			<td class="weekend"><span class="date">24</span><div class="day"></div></td>
+		</tr>
+		<tr>
+			<td class="weekend"><span class="date">25</span><div class="day"></div></td>
+			<td><span class="date">26</span><div class="day"></div></td>
+			<td><span class="date">27</span><div class="day"></div></td>
+			<td><span class="date">28</span><div class="day"></div></td>
+			<td class="next"><span class="date">1</span><div class="day"></div></td>
+			<td class="next"><span class="date">2</span><div class="day"></div></td>
+			<td class="weekend next"><span class="date">3</span><div class="day"></div></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</body>
+</html>

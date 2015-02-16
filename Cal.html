@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!--DVID=00014E6B-->
+<HTML>
+<head>
+
+<title>Calendar</title>
+<style type="text/css">
+html, body { margin: 0; padding: 0 }
+body { background-color:#060; }
+#container { margin: 3em auto  0 3em; padding-bottom: 3em; background-color: #fff; }
+#month { border-collapse: collapse; margin-left: 2em; }
+#month th, #month td { border: 1px solid #000; }
+#month thead { background-color:#9c9; }
+#month td { width: 7em; height: 7em; padding: .2em; vertical-align: top; overflow: auto; }
+td .day { width: 7em; height: 6em; overflow:auto; margin-top: 0; }
+#month tbody .weekend { background-color:#ded; }
+#month tbody .next, #month tbody .previous { background-color:#ddd; }
+.rtop { display:block; background:#060; }
+.rtop * { display: block; height: 1px; overflow: hidden; background:#fff; }
+.r1{margin: 0 0 0 5px}
+.r2{margin: 0 0 0 3px}
+.r3{margin: 0 0 0 2px}
+.r4{margin: 0 0 0 1px; height: 2px}
+#container h1 { margin: 0 0 .5em .5em; font: 2em Arial, Helvetica, sans-serif; color: #060; }
+#month th { font: 1em  bold Arial, Helvetica, sans-serif; }
+p {margin-top: 0; }
+</style>
+</head>
+
+<body>
+<div id="container">
+<b class="rtop"><b class="r1"></b> <b class="r2"></b><b class="r3"></b> <b class="r4"></b></b>
+<h1>{{ current_month }} {{ current_year }}</h1>
+<form method="post">
+<input type="button"
+       value="BACK"
+       OnClick="history.go(-1);return true;">
+ 
+
+<table id="month">
+	<thead>
+		<tr>
+			<th class="weekend">Sunday</th>
+			<th>Monday</th>
+			<th>Tuesday</th>
+			<th>Wednesday</th>
+			<th>Thursday</th>
+			<th>Friday</th>
+			<th class="weekend">Saturday</th>
+		</tr>
+	</thead>
+	<form action="/Confirmation" method="post">
+        <tbody>
+		<tr>
+		        <td class="weekend"><span class="date">{{dates.0}}</span><div class="day">
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos1.0}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.0}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.0}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.0}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.0}}  <br /> 
+			</div></td>
+
+		        <td class="date"><span class="date">{{dates.1}}</span><div class="day">
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos1.1}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.1}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.1}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.1}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.1}}  <br /> 
+			</div></td>
+
+			<td class="date"><span class="date">{{dates.2}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.2}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.2}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.2}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.2}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.2}}  <br /></div></td>
+			<td class="date"><span class="date">{{dates.3}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.3}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.3}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.3}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.3}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.3}}  <br /></div></td>
+			<td><span class="date">{{dates.4}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.4}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.4}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.4}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.4}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.4}}  <br /></div></td>
+			<td><span class="date">{{dates.5}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.5}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.5}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.5}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.5}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.5}}  <br /></div></td>
+			<td class="weekend"><span class="date">{{dates.6}}</span><div class="day"> <input type="radio" name="position" value="{{dates.0}}">{{pos1.6}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.6}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.6}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.6}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.6}}  <br /></div></td>
+		</tr>
+		<tr>
+			<td class="weekend"><span class="date">{{dates.7}}</span><div class="day"> <input type="radio" name="position" value="{{dates.0}}">{{pos1.7}} <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.7}} <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.7}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.7}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.7}}  <br /></div></td>
+			<td><span class="date">{{dates.8}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.8}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.8}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.8}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.8}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.8}}  <br /></div></td>
+			<td><span class="date">{{dates.9}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.9}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.9}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.9}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.9}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.9}}  <br /></div></td>
+			<td><span class="date">{{dates.10}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.10}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.10}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.10}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.10}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.10}}  <br /></div></td>
+			<td><span class="date">{{dates.11}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.11}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.11}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.11}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.11}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.11}}  <br /></div></td>
+			<td><span class="date">{{dates.12}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.12}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.12}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.12}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.12}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.12}}  <br /></div></td>
+			<td class="weekend"><span class="date">{{dates.13}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.13}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.13}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.13}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.13}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.13}}  <br /></div></td>
+		</tr>
+		<tr>
+			<td class="weekend"><span class="date">{{dates.14}}</span><div class="day"> <input type="radio" name="position" value="{{dates.0}}"> {{pos1.14}} <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.14}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.14}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.14}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.14}}  <br /></div></td>
+			<td><span class="date">{{dates.15}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.15}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.15}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.15}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.15}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.15}}  <br /></div></td>
+			<td><span class="date">{{dates.16}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.16}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.16}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.16}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.16}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.16}}  <br /></div></td>
+			<td><span class="date">{{dates.17}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.17}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.17}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.17}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.17}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.17}}  <br /></div></td>
+			<td><span class="date">{{dates.18}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.18}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.18}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.18}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.18}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.18}}  <br /></div></td>
+
+			<td><span class="date">{{dates.19}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.19}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.19}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.19}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.19}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.19}}  <br /></div></td>
+			<td class="weekend"><span class="date">{{dates.20}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.20}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.20}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.20}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.20}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.20}}  <br /></div></td>
+		</tr>
+		<tr>
+			<td class="weekend"><span class="date">{{dates.21}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.21}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.21}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.21}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.21}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.21}}  <br /></div></td>
+			<td><span class="date">{{dates.22}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.22}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.22}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.22}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.22}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.22}}  <br /></div></td>
+			<td><span class="date">{{dates.23}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.23}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.23}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.23}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.23}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.23}}  <br /></div></td>
+			<td><span class="date">{{dates.24}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.24}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.24}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.24}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.24}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.24}}  <br /></div></td>
+			<td><span class="date">{{dates.25}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.25}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.25}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.25}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.25}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.25}}  <br /></div></td>
+			<td><span class="date">{{dates.26}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.26}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.26}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.26}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.26}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.26}}  <br /></div></td>
+			<td class="weekend"><span class="date">{{dates.27}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.27}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.27}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.27}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.27}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.27}}  <br /></div></td>
+		</tr>
+		<tr>
+			<td class="weekend"><span class="date">{{dates.28}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.28}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.28}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.28}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.28}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.28}}  <br /></div></td>
+			<td><span class="date">{{dates.29}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.29}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.29}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.29}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.29}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.29}}  <br /></div></td>
+			<td><span class="date">{{dates.30}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.30}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.30}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.30}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.30}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.30}}  <br /></div></td>
+			<td><span class="date">{{dates.31}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.31}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.31}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.31}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.31}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.31}}  <br /></div></td>
+			<td class="date"><span class="date">{{dates.32}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.32}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.32}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.32}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.32}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.32}}  <br /></div></td>
+			<td class="date"><span class="date">{{dates.33}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.33}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.33}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.33}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.33}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.33}}  <br /></div></td>
+			<td class="weekend"><span class="date">{{dates.34}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.34}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.34}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.34}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.34}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.34}}  <br /></div></td>
+		</tr>
+		<tr>
+			<td class="weekend"><span class="date">{{dates.35}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.35}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.35}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.35}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.35}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.35}}  <br /></div></td>
+			<td><span class="date">{{dates.36}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.36}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.36}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.36}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.36}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.36}}  <br /></div></td>
+			<td><span class="date">{{dates.37}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.37}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.37}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.37}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.37}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.37}}  <br /></div></td>
+			<td><span class="date">{{dates.38}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.38}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.38}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.38}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.38}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.38}}  <br /></div></td>
+			<td class="date"><span class="date">{{dates.39}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.39}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.39}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.39}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.39}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.39}}  <br /></div></td>
+			<td class="date"><span class="date">{{dates.40}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.40}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.40}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.40}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.40}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.40}}  <br /></div></td>
+			<td class="weekend"><span class="date">{{dates.41}}</span><div class="day"><input type="radio" name="position" value="{{dates.0}}"> {{pos1.41}}  <br />
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos2.41}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos3.41}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos4.41}}  <br /> 
+			<input type="radio" name="position" value="{{dates.0}}"> {{pos5.41}}  <br /></div></td>
+		</tr>
+	</tbody>
+	<input type="submit" value="Select Shift"> 
+	</form>
+</table>
+</div>
+</body>
+</html>

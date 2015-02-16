@@ -1,0 +1,24 @@
+	<html> <body>
+	<form action="/Post" method="post">
+			<div>Name<input name="name" type="text" rows="1" /></div>
+			<div>Address<input name="address" type="text" rows="1" /></div>
+			<div>Email<input name="email" type="text" rows="1" value= {{user_email}} ></div>
+			<div>Home Phone<input name="home_phone" type="text" rows="1" /></div> 
+			<div>Cell Phone<input name="cell_phone" type="text" rows="1" /></div> 
+			<div>Emergency Contact<input name="emergency_contact" type="text" rows="1" /></div>
+			<div>Emergency Contact Phone<input name="emergency_phone" type="text" rows="1" /></div> 
+			<div>Do you want to be on call?<input name="On call?" type="text" rows="1" /></div> 
+			<div>On call preference<input name="On call preference" type="text" rows="1" /></div>
+			<div>Are you an IU student?
+				<input type="radio" name="iu student" /> Yes
+				<input type="radio" name="not iu student" /> No
+			</div>
+			<div>Are you a registered sex offender?
+				<input type="radio" name="sex offender" /> Yes
+				<input type="radio" name="not sex offender" /> No
+			</div>
+			<div><input type="submit" value="Post"></div>
+          </form>
+          <hr>
+        </body>
+      </html>
